@@ -8,6 +8,12 @@ In this repository, I have stored all the data structes and algorithms I have pr
 - Inside each of these directories is a collection of folder named according to each data structure or algo.
 - Inside each of the above mentioned folders(point 3) there are different versions of code for *each Language*.
 - Each source file contains a function or an object which is publicly callable. So you can use them just by downloading and importing to your **main.app** file.
+- Each **main.app** also contains use cases.
+
+### Acknowledgement
+I thank the following contributors for making such a vast variety of learning resources freely available. Sincerely, without you guys, we would not have been able to learn a new tech or land a job anywhere.
+- freecodecamp.org
+- geeksforgeeks.org
 ----------
 ## Directory Hierarchy Explained
 

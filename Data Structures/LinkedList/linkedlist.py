@@ -155,28 +155,47 @@ class LinkedList:
     #at any point of the list
     #containing the index number
     #the list is considered 0-indexed
-##    def deleteNodeByIndex(self, index_to_delete):
-##        #creatnig a temporary variable to
-##        #store the current header node
-##        temp = self.head
-##        #Checking if the header node is not empty
-##        #and that the "header's data" matches the "data to be deleted"
-##        if (temp is not None) and (temp.data == data_to_delete):
-##            #assigning current header's next list item to
-##            #be the new header
-##            self.head = temp.next
-##            #setting the current header to None
-##            #in other words deleting it from existence
-##            temp = None
-##        else:
-##            #searching for the index to be deleted
-##            #using linear search
-##            #also keeping track of the prev_node
-##            while temp is not None:
-##                if temp.data == data_to_delete:
-##                    break
-##                prev_node = temp
-##                temp = temp.next
+    def deleteNodeByIndex(self, index_to_delete):
+        #creatnig a temporary variable to
+        #store the current header node
+        temp = self.head
+        #checking if header node is empty or not
+        #printing error message if yes
+        if temp in None:
+            print("\nERROR: There is no list to start with!")
+            return
+        #if index to delete is 0 that means the
+        #user wants to delete the header
+        #so we do that
+        if index_to_delete == 0:
+            temp = temp.next
+            return self.head
+
+        #setting up parameters for linear search
+        index = 0
+        current_node = self.head
+        prev_node = self.head
+
+        #searching for selected index valued node
+        #storing it in "current_node"
+        while current_node is not None:
+            if index == index_to_delete:
+                temp = current_node.next
+                break
+            #settnig the previous node to the current node
+            #to take a step ahead in linear search
+            prev_node = current_node
+            #index counter
+            #since our Node class doesn;t have any index attribute
+            index += 1
+        #
+        prev_node.next = temp
+        
+        #printing a message for successfully completing the operation
+        print(f"\nMESSAGE: Successfully deleted \"{prev_node}\" in the list")
+        
+
+        
 
 """calling the main method.
 not needed when using this file as a module

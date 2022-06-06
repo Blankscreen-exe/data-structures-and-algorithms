@@ -186,7 +186,7 @@ class LinkedList:
             #to take a step ahead in linear search
             prev_node = current_node
             #index counter
-            #since our Node class doesn;t have any index attribute
+            #since our Node class doesn't have any index attribute
             index += 1
         #
         prev_node.next = temp
